@@ -1,0 +1,7 @@
+package character;
+
+public enum EnumCharacter {
+
+	GUERREIRO, CAVALEIRO, VIKING, ARQUEIRO, EXTERMINADOR_DO_FUTURO, CAPITAO_ARMEIRO;
+
+}
