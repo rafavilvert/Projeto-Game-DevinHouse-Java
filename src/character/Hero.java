@@ -1,6 +1,10 @@
 package character;
 
-public class Hero extends Character {
+public class Hero extends Personage {
+	
+	public Hero() {
+		
+	}
 
 	public Hero(String name, EnumSex sex, EnumCharacter typeCharacter, EnumHelmet helmet, int helmetScore,
 			EnumCostume costume, int costumeScore, EnumWeapon weaponOne, int weaponOneScore) {
@@ -11,8 +15,24 @@ public class Hero extends Character {
 		opponentPlayer.setLife(opponentPlayer.getLife() - dano);
 	}
 
-	public void atacar(Armeiro opponentPlayer, Double dano, Double diffycult) {
-		opponentPlayer.setLife(opponentPlayer.getLife() - (dano * (1 - diffycult)));
+	public void atacar(Personage opponentPlayer, int levelGame) {
+		int option = 0;
+		while (option != 127) {
+
+			if (levelGame == 1) {
+				opponentPlayer.setLife(opponentPlayer.getLife() - (this.getTotaldamage()));
+				option = 127;
+			} else if (levelGame == 2) {
+				opponentPlayer.setLife(opponentPlayer.getLife() - this.getTotaldamage());
+				option = 127;
+			} else if (levelGame == 3) {
+				opponentPlayer.setLife(opponentPlayer.getLife() - (this.getTotaldamage() * 0.9));
+				option = 127;
+			} else {
+				System.out.println("Digite uma opção válida");
+			}
+		}
+
 	}
 
 }

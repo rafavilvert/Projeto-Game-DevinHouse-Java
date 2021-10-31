@@ -1,6 +1,6 @@
 package character;
 
-public class EnemyCaptain extends Character {
+public class EnemyCaptain extends Personage {
 
 	public EnemyCaptain(String name, EnumSex sex, EnumCharacter typeCharacter, EnumHelmet helmet, int helmetScore,
 			EnumCostume costume, int costumeScore, EnumWeapon weaponOne, int weaponOneScore) {
