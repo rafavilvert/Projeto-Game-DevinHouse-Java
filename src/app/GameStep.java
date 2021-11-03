@@ -101,55 +101,40 @@ public class GameStep {
 
 	public void chooseSex() {
 
-		while (sexOption != 127) {
+		while (sexOption != 1 && sexOption != 2) {
 			System.out
 					.println("Escolha o sexo do personagem: \n" + "1 - Masculino\n" + "2 - Feminino\n" + "3 - Outro\n");
 			sexOption = entrada.nextInt();
 
-			if (sexOption == 1) {
+			switch (sexOption) {
+			case 1:
 				sex = EnumSex.MASCULINO;
-				sexOption = 127;
-			} else if (sexOption == 2) {
+				sexOption = 1;
+				break;
+			case 2:
 				sex = EnumSex.FEMININO;
-				sexOption = 127;
-			} else if (sexOption == 3) {
+				break;
+			case 3:
 				sex = EnumSex.OUTRO;
-				sexOption = 127;
-			} else {
+				break;
+
+			default:
 				System.out.println("Digite uma opção válida\n");
+				break;
 			}
 		}
 
 	}
 
 	public void chooseName() {
-		System.out.println("Escolha o nome do personagem");
+		System.out.println("Escolha o nome do personagem\n");
 		heroName = entrada.next();
 	}
 
 	public Hero createHero() {
 
-		while (sexOption != 127) {
-			System.out
-					.println("Escolha o sexo do personagem: \n" + "1 - Masculino\n" + "2 - Feminino\n" + "3 - Outro\n");
-			sexOption = entrada.nextInt();
-
-			if (sexOption == 1) {
-				sex = EnumSex.MASCULINO;
-				sexOption = 127;
-			} else if (sexOption == 2) {
-				sex = EnumSex.FEMININO;
-				sexOption = 127;
-			} else if (sexOption == 3) {
-				sex = EnumSex.OUTRO;
-				sexOption = 127;
-			} else {
-				System.out.println("Digite uma opção válida\n");
-				sexOption = 0;
-			}
-		}
-
-		while (characterOption != 127) {
+		while (characterOption != 1 && characterOption != 2 && characterOption != 3 && characterOption != 4
+				&& characterOption != 5) {
 			System.out.println("Escolha o seu personagem: \n" + "1 - GUERREIRO\n" + "2 - CAVALEIRO\n" + "3 - VIKING\n"
 					+ "4 - ARQUEIRO\n" + "5 -EXTERMINADOR DO FUTURO \n");
 			characterOption = entrada.nextInt();
@@ -157,292 +142,366 @@ public class GameStep {
 			if (characterOption == 1) {
 				character = EnumCharacter.GUERREIRO;
 
-				while (helmetOption != 127) {
+				while (helmetOption != 1 && helmetOption != 2 && helmetOption != 3) {
 					System.out.println("Escolha o capacete do personagem\n" + "1 - OURO\n" + "2 - DIAMANTE\n"
 							+ "3 - ADAMANTIUM\n");
 					helmetOption = entrada.nextInt();
-					if (helmetOption == 1) {
+
+					switch (helmetOption) {
+					case 1:
 						helmet = EnumHelmet.OURO;
-						helmetOption = 127;
-					} else if (helmetOption == 2) {
+						break;
+					case 2:
 						helmet = EnumHelmet.DIAMANTE;
-						helmetOption = 127;
-					} else if (helmetOption == 3) {
+						break;
+					case 3:
 						helmet = EnumHelmet.ADAMANTIUM;
-						helmetOption = 127;
-					} else {
+						break;
+
+					default:
 						System.out.println("Digite uma opção válida\n");
+						break;
 					}
+
 				}
 
-				while (costumeOption != 127) {
+				while (costumeOption != 1 && costumeOption != 2 && costumeOption != 3) {
 					System.out.println(
 							"Escolha a armadura do personagem\n" + "1 - ARMADURA\n" + "2 - HEROI\n" + "3 - CAMPONES\n");
 					costumeOption = entrada.nextInt();
-					if (costumeOption == 1) {
+
+					switch (costumeOption) {
+					case 1:
 						costume = EnumCostume.ARMADURA;
-						costumeOption = 127;
-					} else if (costumeOption == 2) {
+						break;
+					case 2:
 						costume = EnumCostume.HEROI;
-						costumeOption = 127;
-					} else if (costumeOption == 3) {
+						break;
+					case 3:
 						costume = EnumCostume.CAMPONES;
-						costumeOption = 127;
-					} else {
+						break;
+
+					default:
 						System.out.println("Digite uma opção válida\n");
+						break;
 					}
+
 				}
 
-				while (weaponOption != 127) {
+				while (weaponOption != 1 && weaponOption != 2 && weaponOption != 3) {
 					System.out.println(
 							"Escolha a arma do personagem\n" + "1 - EXCALIBUR\n" + "2 - SAMURAI\n" + "3 - ADAGA\n");
 					weaponOption = entrada.nextInt();
-					if (weaponOption == 1) {
+
+					switch (weaponOption) {
+					case 1:
 						weapon = EnumWeapon.EXCALIBUR;
-						weaponOption = 127;
-					} else if (weaponOption == 2) {
+						break;
+					case 2:
 						weapon = EnumWeapon.SAMURAI;
-						weaponOption = 127;
-					} else if (weaponOption == 3) {
+						break;
+					case 3:
 						weapon = EnumWeapon.ADAGA;
-						weaponOption = 127;
-					} else {
+						break;
+
+					default:
 						System.out.println("Digite uma opção válida\n");
+						break;
 					}
+
 				}
-				characterOption = 127;
+
 			} else if (characterOption == 2) {
 				character = EnumCharacter.CAVALEIRO;
 
-				while (helmetOption != 127) {
+				while (helmetOption != 1 && helmetOption != 2 && helmetOption != 3) {
 					System.out.println("Escolha o capacete do personagem\n" + "1 - OURO\n" + "2 - DIAMANTE\n"
 							+ "3 - ADAMANTIUM\n");
 					helmetOption = entrada.nextInt();
-					if (helmetOption == 1) {
+
+					switch (helmetOption) {
+					case 1:
 						helmet = EnumHelmet.OURO;
-						helmetOption = 127;
-					} else if (helmetOption == 2) {
+						break;
+					case 2:
 						helmet = EnumHelmet.DIAMANTE;
-						helmetOption = 127;
-					} else if (helmetOption == 3) {
+						break;
+					case 3:
 						helmet = EnumHelmet.ADAMANTIUM;
-						helmetOption = 127;
-					} else {
+						break;
+
+					default:
 						System.out.println("Digite uma opção válida\n");
+						break;
 					}
+
 				}
 
-				while (costumeOption != 127) {
+				while (costumeOption != 1 && costumeOption != 2 && costumeOption != 3) {
 					System.out.println(
 							"Escolha a armadura do personagem\n" + "1 - ARMADURA\n" + "2 - HEROI\n" + "3 - CAMPONES\n");
 					costumeOption = entrada.nextInt();
-					if (costumeOption == 1) {
+
+					switch (costumeOption) {
+					case 1:
 						costume = EnumCostume.ARMADURA;
-						costumeOption = 127;
-					} else if (costumeOption == 2) {
+						break;
+					case 2:
 						costume = EnumCostume.HEROI;
-						costumeOption = 127;
-					} else if (costumeOption == 3) {
+						break;
+					case 3:
 						costume = EnumCostume.CAMPONES;
-						costumeOption = 127;
-					} else {
-						System.out.println("Digite uma opção válida");
+						break;
+
+					default:
+						System.out.println("Digite uma opção válida\n");
+						break;
 					}
+
 				}
 
-				while (weaponOption != 127) {
+				while (weaponOption != 1 && weaponOption != 2 && weaponOption != 3) {
 					System.out.println("Escolha o cavalo do personagem\n" + "1 - PEGASUS\n" + "2 - CAVALO DE FOGO\n"
 							+ "3 - PÉ DE PANO\n");
 					weaponOption = entrada.nextInt();
-					if (weaponOption == 1) {
+
+					switch (weaponOption) {
+					case 1:
 						weapon = EnumWeapon.PEGASUS;
-						weaponOption = 127;
-					} else if (weaponOption == 2) {
+						break;
+					case 2:
 						weapon = EnumWeapon.CAVALO_DE_FOGO;
-						weaponOption = 127;
-					} else if (weaponOption == 3) {
+						break;
+					case 3:
 						weapon = EnumWeapon.PE_DE_PANO;
-						weaponOption = 127;
-					} else {
+						break;
+
+					default:
 						System.out.println("Digite uma opção válida\n");
+						break;
 					}
+
 				}
-				characterOption = 127;
+
 			} else if (characterOption == 3) {
 				character = EnumCharacter.VIKING;
 
-				while (helmetOption != 127) {
+				while (helmetOption != 1 && helmetOption != 2 && helmetOption != 3) {
 					System.out.println("Escolha o capacete do personagem\n" + "1 - OURO\n" + "2 - DIAMANTE\n"
 							+ "3 - ADAMANTIUM\n");
 					helmetOption = entrada.nextInt();
-					if (helmetOption == 1) {
+
+					switch (helmetOption) {
+					case 1:
 						helmet = EnumHelmet.OURO;
-						helmetOption = 127;
-					} else if (helmetOption == 2) {
+						break;
+					case 2:
 						helmet = EnumHelmet.DIAMANTE;
-						helmetOption = 127;
-					} else if (helmetOption == 3) {
+						break;
+					case 3:
 						helmet = EnumHelmet.ADAMANTIUM;
-						helmetOption = 127;
-					} else {
+						break;
+
+					default:
 						System.out.println("Digite uma opção válida\n");
+						break;
 					}
+
 				}
 
-				while (costumeOption != 127) {
+				while (costumeOption != 1 && costumeOption != 2 && costumeOption != 3) {
 					System.out.println(
 							"Escolha a armadura do personagem\n" + "1 - ARMADURA\n" + "2 - HEROI\n" + "3 - CAMPONES\n");
 					costumeOption = entrada.nextInt();
-					if (costumeOption == 1) {
+
+					switch (costumeOption) {
+					case 1:
 						costume = EnumCostume.ARMADURA;
-						costumeOption = 127;
-					} else if (costumeOption == 2) {
+						break;
+					case 2:
 						costume = EnumCostume.HEROI;
-						costumeOption = 127;
-					} else if (costumeOption == 3) {
+						break;
+					case 3:
 						costume = EnumCostume.CAMPONES;
-						costumeOption = 127;
-					} else {
+						break;
+
+					default:
 						System.out.println("Digite uma opção válida\n");
+						break;
 					}
+
 				}
 
-				while (weaponOption != 127) {
+				while (weaponOption != 1 && weaponOption != 2 && weaponOption != 3) {
 					System.out.println(
 							"Escolha a arma do personagem\n" + "1 - MACHADO\n" + "2 - MARTELO\n" + "3 - ESCUDO\n");
 					weaponOption = entrada.nextInt();
-					if (weaponOption == 1) {
+
+					switch (weaponOption) {
+					case 1:
 						weapon = EnumWeapon.MACHADO;
-						weaponOption = 127;
-					} else if (weaponOption == 2) {
+						break;
+					case 2:
 						weapon = EnumWeapon.MARTELO;
-						weaponOption = 127;
-					} else if (weaponOption == 3) {
+						break;
+					case 3:
 						weapon = EnumWeapon.ESCUDO;
-						weaponOption = 127;
-					} else {
+						break;
+
+					default:
 						System.out.println("Digite uma opção válida\n");
+						break;
 					}
+
 				}
-				characterOption = 127;
+
 			} else if (characterOption == 4) {
 				character = EnumCharacter.ARQUEIRO;
 
-				while (helmetOption != 127) {
+				while (helmetOption != 1 && helmetOption != 2 && helmetOption != 3) {
 					System.out.println("Escolha o capacete do personagem\n" + "1 - OURO\n" + "2 - DIAMANTE\n"
 							+ "3 - ADAMANTIUM\n");
 					helmetOption = entrada.nextInt();
-					if (helmetOption == 1) {
+
+					switch (helmetOption) {
+					case 1:
 						helmet = EnumHelmet.OURO;
-						helmetOption = 127;
-					} else if (helmetOption == 2) {
+						break;
+					case 2:
 						helmet = EnumHelmet.DIAMANTE;
-						helmetOption = 127;
-					} else if (helmetOption == 3) {
+						break;
+					case 3:
 						helmet = EnumHelmet.ADAMANTIUM;
-						helmetOption = 127;
-					} else {
+						break;
+
+					default:
 						System.out.println("Digite uma opção válida\n");
+						break;
 					}
+
 				}
 
-				while (costumeOption != 127) {
+				while (costumeOption != 1 && costumeOption != 2 && costumeOption != 3) {
 					System.out.println(
 							"Escolha a armadura do personagem\n" + "1 - ARMADURA\n" + "2 - HEROI\n" + "3 - CAMPONES\n");
 					costumeOption = entrada.nextInt();
-					if (costumeOption == 1) {
+
+					switch (costumeOption) {
+					case 1:
 						costume = EnumCostume.ARMADURA;
-						costumeOption = 127;
-					} else if (costumeOption == 2) {
+						break;
+					case 2:
 						costume = EnumCostume.HEROI;
-						costumeOption = 127;
-					} else if (costumeOption == 3) {
+						break;
+					case 3:
 						costume = EnumCostume.CAMPONES;
-						costumeOption = 127;
-					} else {
+						break;
+
+					default:
 						System.out.println("Digite uma opção válida\n");
+						break;
 					}
+
 				}
 
-				while (weaponOption != 127) {
+				while (weaponOption != 1 && weaponOption != 2 && weaponOption != 3) {
 					System.out.println("Escolha a arma do personagem\n" + "1 - FLEXAS DE AÇO\n" + "2 - FLEXAS DE FOGO\n"
 							+ "3 - BESTA\n");
 					weaponOption = entrada.nextInt();
-					if (weaponOption == 1) {
+
+					switch (weaponOption) {
+					case 1:
 						weapon = EnumWeapon.FLEXAS_DE_ACO;
-						weaponOption = 127;
-					} else if (weaponOption == 2) {
+						break;
+					case 2:
 						weapon = EnumWeapon.FLEXAS_DE_FOGO;
-						weaponOption = 127;
-					} else if (weaponOption == 3) {
+						break;
+					case 3:
 						weapon = EnumWeapon.BESTA;
-						weaponOption = 127;
-					} else {
+						break;
+
+					default:
 						System.out.println("Digite uma opção válida\n");
+						break;
 					}
+
 				}
-				characterOption = 127;
+
 			} else if (characterOption == 5) {
 				character = EnumCharacter.EXTERMINADOR_DO_FUTURO;
 
-				while (helmetOption != 127) {
+				while (helmetOption != 1 && helmetOption != 2 && helmetOption != 3) {
 					System.out.println("Escolha o capacete do personagem\n" + "1 - OURO\n" + "2 - DIAMANTE\n"
 							+ "3 - ADAMANTIUM\n");
 					helmetOption = entrada.nextInt();
-					if (helmetOption == 1) {
+
+					switch (helmetOption) {
+					case 1:
 						helmet = EnumHelmet.OURO;
-						helmetOption = 127;
-					} else if (helmetOption == 2) {
+						break;
+					case 2:
 						helmet = EnumHelmet.DIAMANTE;
-						helmetOption = 127;
-					} else if (helmetOption == 3) {
+						break;
+					case 3:
 						helmet = EnumHelmet.ADAMANTIUM;
-						helmetOption = 127;
-					} else {
-						System.out.println("Digite uma opção válida");
+						break;
+
+					default:
+						System.out.println("Digite uma opção válida\n");
+						break;
 					}
+
 				}
 
-				while (costumeOption != 127) {
+				while (costumeOption != 1 && costumeOption != 2 && costumeOption != 3) {
 					System.out.println(
 							"Escolha a armadura do personagem\n" + "1 - ARMADURA\n" + "2 - HEROI\n" + "3 - CAMPONES\n");
 					costumeOption = entrada.nextInt();
-					if (costumeOption == 1) {
+
+					switch (costumeOption) {
+					case 1:
 						costume = EnumCostume.ARMADURA;
-						costumeOption = 127;
-					} else if (costumeOption == 2) {
+						break;
+					case 2:
 						costume = EnumCostume.HEROI;
-						costumeOption = 127;
-					} else if (costumeOption == 3) {
+						break;
+					case 3:
 						costume = EnumCostume.CAMPONES;
-						costumeOption = 127;
-					} else {
+						break;
+
+					default:
 						System.out.println("Digite uma opção válida\n");
+						break;
 					}
+
 				}
 
-				while (weaponOption != 127) {
+				while (weaponOption != 1 && weaponOption != 2 && weaponOption != 3) {
 					System.out.println("Escolha a arma do personagem\n" + "1 - ESPINGARDA\n" + "2 - METRALHADORA\n"
 							+ "3 - PISTOLA\n");
 					weaponOption = entrada.nextInt();
-					if (weaponOption == 1) {
+
+					switch (weaponOption) {
+					case 1:
 						weapon = EnumWeapon.ESPINGARDA;
-						weaponOption = 127;
-					} else if (weaponOption == 2) {
+						break;
+					case 2:
 						weapon = EnumWeapon.METRALHADORA;
-						weaponOption = 127;
-					} else if (weaponOption == 3) {
+						break;
+					case 3:
 						weapon = EnumWeapon.PISTOLA;
-						weaponOption = 127;
-					} else {
+						break;
+
+					default:
 						System.out.println("Digite uma opção válida\n");
+						break;
 					}
+
 				}
-				characterOption = 127;
+
 			}
 		}
 
-		characterOption = 127;
 		enterIntoGame = 2;
 		return hero = new Hero(heroName, sex, character, helmet, helmet.getDano(), costume, costume.getDano(), weapon,
 				weapon.getDano());
@@ -452,7 +511,7 @@ public class GameStep {
 	public void gameIntroduction() {
 		System.out.println(EnumGameAction.GAME_INTRODUCTION.getMessage());
 		System.out.println(
-				"Escolha sua motivação para invadir a caverna do inimigo e derrotá-lo: \n1 - Vingança\n2 - Glória");
+				"Escolha sua motivação para invadir a caverna do inimigo e derrotá-lo: \n1 - Vingança\n2 - Glória\n");
 		gameMotivation = entrada.nextInt();
 		if (gameMotivation == 1) {
 			gameAction = EnumGameAction.VINGANCA.getMessage();
@@ -465,7 +524,7 @@ public class GameStep {
 
 	public void goAheadOrGiveUp() {
 		System.out.println(EnumGameAction.AFTER_CHOOSE_MOTIVATION.getMessage());
-		System.out.println("Qual seu caminho: \n1 - Seguir em frente\n2 - Desistir feito um covarde");
+		System.out.println("Qual seu caminho: \n1 - Seguir em frente\n2 - Desistir feito um covarde\n");
 		chooseGameGoAheadOrGiveUp = entrada.nextInt();
 		if (chooseGameGoAheadOrGiveUp == 1) {
 			gameGoAheadOrGiveUp = EnumGameAction.SEGUIR.getMessage();
@@ -480,7 +539,7 @@ public class GameStep {
 	public void enterTheDoor() {
 		int diceRollDamageHero;
 		System.out.println(EnumGameAction.AFTER_CHOOSE_GO_OR_GIVEUP.getMessage());
-		System.out.println("\nEntrar pela porta: \n1 - Saltando\n2 - Andando\n3 - Correndo");
+		System.out.println("\nEntrar pela porta: \n1 - Saltando\n2 - Andando\n3 - Correndo\n");
 		chooseEnterTheDoor = entrada.nextInt();
 		if (chooseEnterTheDoor == 1) {
 			gameEnterTheDoor = EnumGameAction.SALTANDO.getMessage();
@@ -509,18 +568,18 @@ public class GameStep {
 		while (mainDoor == 0) {
 			if (rightDoor == 0 && leftDoor == 0 && mainDoor == 0) {
 				System.out.println(
-						"Escolha em qual porta você deseja entrar primeiro: \n1 - Porta à direita\n2 - Porta ao centro\n3 - Porta à esquerda");
+						"Escolha em qual porta você deseja entrar primeiro: \n1 - Porta à direita\n2 - Porta ao centro\n3 - Porta à esquerda\n");
 				chooseDoorToFight = entrada.nextInt();
 			} else if (rightDoor == 1 && leftDoor == 0 && mainDoor == 0) {
 				System.out.println(
-						"Escolha em qual porta você deseja entrar: \n2 - Porta ao centro\n3 - Porta à esquerda");
+						"Escolha em qual porta você deseja entrar: \n2 - Porta ao centro\n3 - Porta à esquerda\n");
 				chooseDoorToFight = entrada.nextInt();
 			} else if (rightDoor == 0 && leftDoor == 1 && mainDoor == 0) {
 				System.out.println(
-						"Escolha em qual porta você deseja entrar: \n1 - Porta à direita\n2 - Porta ao centro");
+						"Escolha em qual porta você deseja entrar: \n1 - Porta à direita\n2 - Porta ao centro\n");
 				chooseDoorToFight = entrada.nextInt();
 			} else {
-				System.out.println("Muito bem você está na portal final digite: \n2 - para entrar");
+				System.out.println("Muito bem você está na portal final digite: \n2 - para entrar\n");
 				chooseDoorToFight = entrada.nextInt();
 			}
 
@@ -528,8 +587,8 @@ public class GameStep {
 				System.out.println(EnumGameAction.PORTA_DIREITA.getMessage());
 				this.fightHeroAgainstArmeiro();
 				System.out.println(EnumGameAction.AFTER_WON_RIGHT_DOOR.getMessage());
-				System.out.println("\nEscolha pegar a armaduro do inimigo: \n1 - Sim\n2 - Não");
-				
+				System.out.println("\nEscolha pegar a armaduro do inimigo: \n1 - Sim\n2 - Não\n");
+
 				aceptGift = entrada.nextInt();
 				if (aceptGift == 1) {
 					System.out.println(EnumGameAction.ACEPT_RIGHT_DOOR_GIFT.getMessage());
@@ -541,7 +600,7 @@ public class GameStep {
 				}
 				doorKeys += 1;
 				rightDoor = 1;
-			} else if (chooseDoorToFight == 2 && mainDoor ==0) {
+			} else if (chooseDoorToFight == 2 && mainDoor == 0) {
 				if (doorKeys == 2) {
 					System.out.println(EnumGameAction.PORTA_PRINCIPAL.getMessage());
 					this.fightHeroAgainstPoderosoChefao();
@@ -553,14 +612,14 @@ public class GameStep {
 					mainDoor = 1;
 				} else {
 					System.out.println(
-							"Você precisa derrotar os dois inimigos e pegar as chaves para poder enfrentar o Poderoso Chefão");
+							"Você precisa derrotar os dois inimigos e pegar as chaves para poder enfrentar o Poderoso Chefão\n");
 				}
 			} else if (chooseDoorToFight == 3 && leftDoor == 0) {
-				
+
 				System.out.println(EnumGameAction.PORTA_ESQUERDA.getMessage());
 				this.fightHeroAgainstAlquimista();
 				System.out.println(EnumGameAction.AFTER_WON_LEFT_DOOR.getMessage());
-				System.out.println("\nEscolha beber o líquido produzido pelo inimigo: \n1 - Sim\n2 - Não");
+				System.out.println("\nEscolha beber o líquido produzido pelo inimigo: \n1 - Sim\n2 - Não\n");
 				aceptGift = entrada.nextInt();
 				if (aceptGift == 1) {
 					System.out.println(EnumGameAction.ACEPT_LEFT_DOOR_GIFT.getMessage());
@@ -603,8 +662,13 @@ public class GameStep {
 	}
 
 	public void printHero() {
-		System.out.println("Nome do heroi " + hero.getName());
-		System.out.println("Vida do heroi " + hero.getLife());
-		System.out.println("Arma do heroi " + hero.getWeaponOne());
+		System.out.println("Você está pronto(a) para batalha: \n");
+		System.out.println("Nome do heroi: " + hero.getName());
+		System.out.println("Sexo: " + hero.getSex());
+		System.out.println("Você é um: " + hero.getTypeCharacter());
+		System.out.println("Seu capacete: " + hero.getHelmet() + " Dano: " + hero.getHelmetScore());
+		System.out.println("Sua armadura: " + hero.getCostume() + " Dano: " + hero.getCostumeScore());
+		System.out.println("Sua arma de combate: " + hero.getWeaponOne() + " Dano: " + hero.getWeaponOneScore());
+		System.out.println("Você tem um poder total de dano de: " + hero.getTotaldamage() + "\n\n");
 	}
 }

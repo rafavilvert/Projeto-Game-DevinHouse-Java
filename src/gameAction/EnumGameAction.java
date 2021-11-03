@@ -110,11 +110,11 @@ public enum EnumGameAction {
 			+ "sensação de alívio e felicidade. Você se vingou, tudo que sempre quis, está feito. Agora você\n"
 			+ "pode seguir sua vida."
 			+ "Você se levanta, olha para os prisioneiros, vai de um em um e os liberta, e todos vocês saem em\n"
-			+ "direção à noite, retornando à cidade. Seu dever está cumprido."),
+			+ "direção à noite, retornando à cidade. Seu dever está cumprido.\n"),
 	MESSAGE_FINAL_GLORY("O êxtase em que você se encontra não cabe dentro de si. Você se ajoelha e grita de\n"
 			+ "alegria. A glória o aguarda, você a conquistou.\n"
 			+ "Você se levanta, olha para os prisioneiros, vai de um em um e os liberta, e todos vocês saem em\n"
-			+ "direção à noite, retornando à cidade. Seu dever está cumprido.");
+			+ "direção à noite, retornando à cidade. Seu dever está cumprido.\n");
 
 	private String message;
 
