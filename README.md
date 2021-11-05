@@ -1,8 +1,13 @@
-# Projeto-Game-DevinHouse-Java
+# Welcome to Projeto-Game-DevinHouse-Java!
 
-This project was developed with Java.
+This project was developed with Java.<br>
 
-## Project:
+### Built With
+
+* [Java](https://www.oracle.com/br/java/)
+* [JDK](https://www.oracle.com/br/java/)
+
+## Project: 
 
 This is a back end project in pure Java that simulating a simple RPG game. 
 
