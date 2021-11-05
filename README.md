@@ -24,4 +24,4 @@ This is a back end project in pure Java that simulating a simple RPG game.
 
 ### Next improvements:
 
-- [ ] Implement Front end
+- [ ] Implementing Front end
