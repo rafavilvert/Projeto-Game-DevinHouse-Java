@@ -142,7 +142,7 @@ public class Fight {
 
 			default:
 				System.out.printf("Vida do Inimigo %.2f \n", enemy.getLife());
-				System.out.printf("Inimigo atacou com %s causou dano de %.2f pontos\n\n", enemy.getWeaponOne(),
+				System.out.printf("Inimigo atacou com %s causou dano de %.2f pontos\n", enemy.getWeaponOne(),
 						(enemy.getTotaldamage() + getDiceRollEnemy()) * levelGameEnemyDamage);
 				hero.setLife(hero.getLife() - ((enemy.getTotaldamage() + getDiceRollEnemy()) * levelGameEnemyDamage));
 				if (hero.getLife() < 0.0) {

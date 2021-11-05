@@ -360,8 +360,8 @@ public class GameStep {
 
 	public Hero createHero() {
 
-		while (getCharacterOption() != 1 && getCharacterOption() != 2 && getCharacterOption() != 3 && getCharacterOption() != 4
-				&& getCharacterOption() != 5) {
+		while (getCharacterOption() != 1 && getCharacterOption() != 2 && getCharacterOption() != 3
+				&& getCharacterOption() != 4 && getCharacterOption() != 5) {
 			System.out.println("Escolha o seu personagem: \n" + "1 - GUERREIRO\n" + "2 - CAVALEIRO\n" + "3 - VIKING\n"
 					+ "4 - ARQUEIRO\n" + "5 - EXTERMINADOR DO FUTURO \n");
 			setCharacterOption(entrada.nextInt());
@@ -730,8 +730,8 @@ public class GameStep {
 		}
 
 		enterIntoGame = 2;
-		return hero = new Hero(getHeroName(), getSex(), getCharacter(), getHelmet(), getHelmet().getDano(), getCostume(), getCostume().getDano(),
-				getWeapon(), getWeapon().getDano());
+		return hero = new Hero(getHeroName(), getSex(), getCharacter(), getHelmet(), getHelmet().getDano(),
+				getCostume(), getCostume().getDano(), getWeapon(), getWeapon().getDano());
 
 	}
 
@@ -766,21 +766,33 @@ public class GameStep {
 	public void enterTheDoor() {
 		int diceRollDamageHero;
 		System.out.println(EnumGameAction.AFTER_CHOOSE_GO_OR_GIVEUP.getMessage());
-		System.out.println("\nEntrar pela porta: \n1 - Saltando\n2 - Andando\n3 - Correndo\n");
-		setChooseEnterTheDoor(entrada.nextInt());
-		if (getChooseEnterTheDoor() == 1) {
-			setGameEnterTheDoor(EnumGameAction.SALTANDO.getMessage());
-			System.out.println(getGameEnterTheDoor());
-		} else if (getChooseEnterTheDoor() == 2) {
-			setGameEnterTheDoor(EnumGameAction.ANDANDO.getMessage());
-			System.out.println(getGameEnterTheDoor());
-			diceRollDamageHero = random.nextInt(10);
-			hero.setLife(100.0 - diceRollDamageHero);
-			System.out.println("E você sofre um dano de: " + diceRollDamageHero);
-			System.out.println("A vida do Heroi fica em: " + hero.getLife());
-		} else if (getChooseEnterTheDoor() == 3) {
-			setGameEnterTheDoor(EnumGameAction.CORRENDO.getMessage());
-			System.out.println(getGameEnterTheDoor());
+
+		while (getChooseEnterTheDoor() != 1 && getChooseEnterTheDoor() != 2 && getChooseEnterTheDoor() != 3) {
+
+			System.out.println("\nEntrar pela porta: \n1 - Saltando\n2 - Andando\n3 - Correndo\n");
+			setChooseEnterTheDoor(entrada.nextInt());
+
+			switch (getChooseEnterTheDoor()) {
+			case 1:
+				setGameEnterTheDoor(EnumGameAction.SALTANDO.getMessage());
+				System.out.println(getGameEnterTheDoor());
+				break;
+			case 2:
+				setGameEnterTheDoor(EnumGameAction.ANDANDO.getMessage());
+				System.out.println(getGameEnterTheDoor());
+				diceRollDamageHero = random.nextInt(10);
+				hero.setLife(100.0 - diceRollDamageHero);
+				System.out.println("E você sofre um dano de: " + diceRollDamageHero);
+				System.out.println("A vida do Heroi fica em: " + hero.getLife());
+				break;
+			case 3:
+				setGameEnterTheDoor(EnumGameAction.CORRENDO.getMessage());
+				System.out.println(getGameEnterTheDoor());
+				break;
+
+			default:
+				System.out.println("Digite uma opção válida");
+			}
 		}
 	}
 
