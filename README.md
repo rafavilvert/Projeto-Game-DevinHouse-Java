@@ -21,3 +21,7 @@ This is a back end project in pure Java that simulating a simple RPG game.
 ## 📦 Usage:
 
 * After clone go into the project directory, open it with your favorite IDE and run.
+
+### Next improvements:
+
+- [ ] Implement Front end
