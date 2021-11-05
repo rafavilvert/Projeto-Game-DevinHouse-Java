@@ -8,7 +8,7 @@ public class App {
 
 		try {
 			game.start();
-//			Thread.sleep(5000);
+			Thread.sleep(5000);
 
 			game.chooseLevelGame();
 
@@ -19,16 +19,16 @@ public class App {
 			game.createHero();
 
 			game.printHero();
-//			Thread.sleep(10000);
+			Thread.sleep(6000);
 
 			game.gameIntroduction();
-//			Thread.sleep(3000);
+			Thread.sleep(2000);
 
 			game.goAheadOrGiveUp();
-//			Thread.sleep(3000);
+			Thread.sleep(2000);
 
 			game.enterTheDoor();
-			Thread.sleep(000);
+			Thread.sleep(2000);
 
 			game.chooseADoorToFight();
 		} catch (InterruptedException e) {
