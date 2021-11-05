@@ -273,20 +273,6 @@ public class GameStep {
 	private int enterIntoGame = 0;
 	Scanner entrada = new Scanner(System.in);
 
-	public final static void clearConsole() {
-		try {
-			final String os = System.getProperty("os.name");
-
-			if (os.contains("Windows")) {
-				Runtime.getRuntime().exec("cls");
-			} else {
-				Runtime.getRuntime().exec("clear");
-			}
-		} catch (final Exception e) {
-			// Handle any exceptions.
-		}
-	}
-
 	public void start() {
 		System.out.println("Escolha uma opção: 1 - Novo jogo 2 - Encerrar");
 		setOptionGame(entrada.nextInt());
@@ -294,7 +280,6 @@ public class GameStep {
 		case 1: {
 			System.out.println("╔══════•ೋೋ•══════╗ \n" + "    Seja bem vindo\n" + "       ao game \n"
 					+ " Glory Of a Brave Hero!\n" + "╚══════•ೋೋ•══════╝\n\n");
-			clearConsole();
 			break;
 		}
 		default:
@@ -737,29 +722,45 @@ public class GameStep {
 
 	public void gameIntroduction() {
 		System.out.println(EnumGameAction.GAME_INTRODUCTION.getMessage());
-		System.out.println(
-				"Escolha sua motivação para invadir a caverna do inimigo e derrotá-lo: \n1 - Vingança\n2 - Glória\n");
-		setGameMotivation(entrada.nextInt());
-		if (getGameMotivation() == 1) {
-			setGameAction(EnumGameAction.VINGANCA.getMessage());
-			System.out.println(gameAction);
-		} else if (getGameMotivation() == 2) {
-			setGameAction(EnumGameAction.GLORIA.getMessage());
-			System.out.println(getGameAction());
+		while (getGameMotivation() != 1 && getGameMotivation() != 2) {
+			System.out.println(
+					"Escolha sua motivação para invadir a caverna do inimigo e derrotá-lo: \n1 - Vingança\n2 - Glória\n");
+			setGameMotivation(entrada.nextInt());
+			switch (getGameMotivation()) {
+			case 1:
+				setGameAction(EnumGameAction.VINGANCA.getMessage());
+				System.out.println(gameAction);
+				break;
+			case 2:
+				setGameAction(EnumGameAction.GLORIA.getMessage());
+				System.out.println(getGameAction());
+				break;
+
+			default:
+				System.out.println("Digite uma opção válida");
+			}
 		}
 	}
 
 	public void goAheadOrGiveUp() {
 		System.out.println(EnumGameAction.AFTER_CHOOSE_MOTIVATION.getMessage());
-		System.out.println("Qual seu caminho: \n1 - Seguir em frente\n2 - Desistir feito um covarde\n");
-		setChooseGameGoAheadOrGiveUp(entrada.nextInt());
-		if (getChooseGameGoAheadOrGiveUp() == 1) {
-			setGameGoAheadOrGiveUp(EnumGameAction.SEGUIR.getMessage());
-			System.out.println(gameGoAheadOrGiveUp);
-		} else {
-			setGameGoAheadOrGiveUp(EnumGameAction.DESISTIR.getMessage());
-			System.out.println(getGameGoAheadOrGiveUp());
-			System.exit(0);
+		while (getChooseGameGoAheadOrGiveUp() != 1 && getChooseGameGoAheadOrGiveUp() != 2) {
+			System.out.println("Qual seu caminho: \n1 - Seguir em frente\n2 - Desistir feito um covarde\n");
+			setChooseGameGoAheadOrGiveUp(entrada.nextInt());
+			switch (getChooseGameGoAheadOrGiveUp()) {
+			case 1:
+				setGameGoAheadOrGiveUp(EnumGameAction.SEGUIR.getMessage());
+				System.out.println(gameGoAheadOrGiveUp);
+				break;
+			case 2:
+				setGameGoAheadOrGiveUp(EnumGameAction.DESISTIR.getMessage());
+				System.out.println(getGameGoAheadOrGiveUp());
+				System.exit(0);
+				break;
+
+			default:
+				System.out.println("Digite uma opção válida");
+			}
 		}
 	}
 

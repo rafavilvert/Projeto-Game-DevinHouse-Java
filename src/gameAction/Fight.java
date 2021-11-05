@@ -60,7 +60,7 @@ public class Fight {
 	public void fight(Hero hero, Personage enemy, int levelGame) {
 
 		while (hero.getLife() > 0.0 && enemy.getLife() > 0.0) {
-			System.out.println("Digite 1 Jodar o dado 2 sair\n");
+			System.out.println("Digite:\n 1 - Jogar o dado e lutar\n 2 - Desistir da luta\n");
 			setChooseAtack(sc.nextInt());
 
 			if (getChooseAtack() == 1) {
