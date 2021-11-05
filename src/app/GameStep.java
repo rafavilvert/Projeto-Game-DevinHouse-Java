@@ -14,38 +14,263 @@ import gameAction.EnumGameAction;
 import gameAction.Fight;
 
 public class GameStep {
-	int optionGame = 0;
-	int levelGame = 0;
-	int sexOption = 0;
-	int characterOption = 0;
-	int helmetOption = 0;
-	int costumeOption = 0;
-	int weaponOption = 0;
-	int gameMotivation = 0;
-	int chooseGameGoAheadOrGiveUp = 0;
-	int chooseEnterTheDoor = 0;
-	int chooseDoorToFight = 0;
-	int doorKeys = 0;
+	private int optionGame = 0;
+	private int levelGame = 0;
+	private int sexOption = 0;
+	private int characterOption = 0;
+	private int helmetOption = 0;
+	private int costumeOption = 0;
+	private int weaponOption = 0;
+	private int gameMotivation = 0;
+	private int chooseGameGoAheadOrGiveUp = 0;
+	private int chooseEnterTheDoor = 0;
+	private int chooseDoorToFight = 0;
+	private int doorKeys = 0;
 
-	String heroName;
-	String gameAction;
-	String gameGoAheadOrGiveUp;
-	String gameEnterTheDoor;
+	private String heroName;
+	private String gameAction;
+	private String gameGoAheadOrGiveUp;
+	private String gameEnterTheDoor;
 
-	EnumSex sex = EnumSex.MASCULINO;
-	EnumCharacter character = EnumCharacter.ARQUEIRO;
-	EnumHelmet helmet = EnumHelmet.ADAMANTIUM;
-	EnumCostume costume = EnumCostume.ARMADURA;
-	EnumWeapon weapon = EnumWeapon.ADAGA;
+	private EnumSex sex = EnumSex.MASCULINO;
+	private EnumCharacter character = EnumCharacter.ARQUEIRO;
+	private EnumHelmet helmet = EnumHelmet.ADAMANTIUM;
+	private EnumCostume costume = EnumCostume.ARMADURA;
 
-	Hero hero = new Hero();
-	Personage armeiro = new Personage();
-	Personage alquimista = new Personage();
-	Personage poderosoChefao = new Personage();
-	Fight combat = new Fight();
-	Random random = new Random();
+	public int getOptionGame() {
+		return optionGame;
+	}
 
-	int enterIntoGame = 0;
+	public void setOptionGame(int optionGame) {
+		this.optionGame = optionGame;
+	}
+
+	public int getLevelGame() {
+		return levelGame;
+	}
+
+	public void setLevelGame(int levelGame) {
+		this.levelGame = levelGame;
+	}
+
+	public int getSexOption() {
+		return sexOption;
+	}
+
+	public void setSexOption(int sexOption) {
+		this.sexOption = sexOption;
+	}
+
+	public int getCharacterOption() {
+		return characterOption;
+	}
+
+	public void setCharacterOption(int characterOption) {
+		this.characterOption = characterOption;
+	}
+
+	public int getHelmetOption() {
+		return helmetOption;
+	}
+
+	public void setHelmetOption(int helmetOption) {
+		this.helmetOption = helmetOption;
+	}
+
+	public int getCostumeOption() {
+		return costumeOption;
+	}
+
+	public void setCostumeOption(int costumeOption) {
+		this.costumeOption = costumeOption;
+	}
+
+	public int getWeaponOption() {
+		return weaponOption;
+	}
+
+	public void setWeaponOption(int weaponOption) {
+		this.weaponOption = weaponOption;
+	}
+
+	public int getGameMotivation() {
+		return gameMotivation;
+	}
+
+	public void setGameMotivation(int gameMotivation) {
+		this.gameMotivation = gameMotivation;
+	}
+
+	public int getChooseGameGoAheadOrGiveUp() {
+		return chooseGameGoAheadOrGiveUp;
+	}
+
+	public void setChooseGameGoAheadOrGiveUp(int chooseGameGoAheadOrGiveUp) {
+		this.chooseGameGoAheadOrGiveUp = chooseGameGoAheadOrGiveUp;
+	}
+
+	public int getChooseEnterTheDoor() {
+		return chooseEnterTheDoor;
+	}
+
+	public void setChooseEnterTheDoor(int chooseEnterTheDoor) {
+		this.chooseEnterTheDoor = chooseEnterTheDoor;
+	}
+
+	public int getChooseDoorToFight() {
+		return chooseDoorToFight;
+	}
+
+	public void setChooseDoorToFight(int chooseDoorToFight) {
+		this.chooseDoorToFight = chooseDoorToFight;
+	}
+
+	public int getDoorKeys() {
+		return doorKeys;
+	}
+
+	public void setDoorKeys(int doorKeys) {
+		this.doorKeys = doorKeys;
+	}
+
+	public String getHeroName() {
+		return heroName;
+	}
+
+	public void setHeroName(String heroName) {
+		this.heroName = heroName;
+	}
+
+	public String getGameAction() {
+		return gameAction;
+	}
+
+	public void setGameAction(String gameAction) {
+		this.gameAction = gameAction;
+	}
+
+	public String getGameGoAheadOrGiveUp() {
+		return gameGoAheadOrGiveUp;
+	}
+
+	public void setGameGoAheadOrGiveUp(String gameGoAheadOrGiveUp) {
+		this.gameGoAheadOrGiveUp = gameGoAheadOrGiveUp;
+	}
+
+	public String getGameEnterTheDoor() {
+		return gameEnterTheDoor;
+	}
+
+	public void setGameEnterTheDoor(String gameEnterTheDoor) {
+		this.gameEnterTheDoor = gameEnterTheDoor;
+	}
+
+	public EnumSex getSex() {
+		return sex;
+	}
+
+	public void setSex(EnumSex sex) {
+		this.sex = sex;
+	}
+
+	public EnumCharacter getCharacter() {
+		return character;
+	}
+
+	public void setCharacter(EnumCharacter character) {
+		this.character = character;
+	}
+
+	public EnumHelmet getHelmet() {
+		return helmet;
+	}
+
+	public void setHelmet(EnumHelmet helmet) {
+		this.helmet = helmet;
+	}
+
+	public EnumCostume getCostume() {
+		return costume;
+	}
+
+	public void setCostume(EnumCostume costume) {
+		this.costume = costume;
+	}
+
+	public EnumWeapon getWeapon() {
+		return weapon;
+	}
+
+	public void setWeapon(EnumWeapon weapon) {
+		this.weapon = weapon;
+	}
+
+	public Hero getHero() {
+		return hero;
+	}
+
+	public void setHero(Hero hero) {
+		this.hero = hero;
+	}
+
+	public Personage getArmeiro() {
+		return armeiro;
+	}
+
+	public void setArmeiro(Personage armeiro) {
+		this.armeiro = armeiro;
+	}
+
+	public Personage getAlquimista() {
+		return alquimista;
+	}
+
+	public void setAlquimista(Personage alquimista) {
+		this.alquimista = alquimista;
+	}
+
+	public Personage getPoderosoChefao() {
+		return poderosoChefao;
+	}
+
+	public void setPoderosoChefao(Personage poderosoChefao) {
+		this.poderosoChefao = poderosoChefao;
+	}
+
+	public Fight getCombat() {
+		return combat;
+	}
+
+	public void setCombat(Fight combat) {
+		this.combat = combat;
+	}
+
+	public Random getRandom() {
+		return random;
+	}
+
+	public void setRandom(Random random) {
+		this.random = random;
+	}
+
+	public int getEnterIntoGame() {
+		return enterIntoGame;
+	}
+
+	public void setEnterIntoGame(int enterIntoGame) {
+		this.enterIntoGame = enterIntoGame;
+	}
+
+	private EnumWeapon weapon = EnumWeapon.ADAGA;
+
+	private Hero hero = new Hero();
+	private Personage armeiro = new Personage();
+	private Personage alquimista = new Personage();
+	private Personage poderosoChefao = new Personage();
+	private Fight combat = new Fight();
+	private Random random = new Random();
+
+	private int enterIntoGame = 0;
 	Scanner entrada = new Scanner(System.in);
 
 	public final static void clearConsole() {
@@ -64,8 +289,8 @@ public class GameStep {
 
 	public void start() {
 		System.out.println("Escolha uma opção: 1 - Novo jogo 2 - Encerrar");
-		optionGame = entrada.nextInt();
-		switch (optionGame) {
+		setOptionGame(entrada.nextInt());
+		switch (getOptionGame()) {
 		case 1: {
 			System.out.println("╔══════•ೋೋ•══════╗ \n" + "    Seja bem vindo\n" + "       ao game \n"
 					+ " Glory Of a Brave Hero!\n" + "╚══════•ೋೋ•══════╝\n\n");
@@ -83,16 +308,16 @@ public class GameStep {
 
 		while (levelGame != 1 && levelGame != 2 && levelGame != 3) {
 			System.out.println("Escolha o nivel de dificuldade: \n" + "1 - Fácil\n" + "2 - Normal\n" + "3 - Difícil\n");
-			levelGame = entrada.nextInt();
-			switch (levelGame) {
+			setLevelGame(entrada.nextInt());
+			switch (getLevelGame()) {
 			case 1:
-				levelGame = 1;
+				setLevelGame(1);
 				break;
 			case 2:
-				levelGame = 2;
+				setLevelGame(2);
 				break;
 			case 3:
-				levelGame = 3;
+				setLevelGame(3);
 				break;
 			}
 		}
@@ -101,21 +326,23 @@ public class GameStep {
 
 	public void chooseSex() {
 
-		while (sexOption != 1 && sexOption != 2) {
+		while (sexOption != 1 && sexOption != 2 && sexOption != 3) {
 			System.out
 					.println("Escolha o sexo do personagem: \n" + "1 - Masculino\n" + "2 - Feminino\n" + "3 - Outro\n");
-			sexOption = entrada.nextInt();
+			setSexOption(entrada.nextInt());
 
-			switch (sexOption) {
+			switch (getSexOption()) {
 			case 1:
-				sex = EnumSex.MASCULINO;
-				sexOption = 1;
+				setSex(EnumSex.MASCULINO);
+				setSexOption(1);
 				break;
 			case 2:
-				sex = EnumSex.FEMININO;
+				setSex(EnumSex.FEMININO);
+				setSexOption(2);
 				break;
 			case 3:
-				sex = EnumSex.OUTRO;
+				setSex(EnumSex.OUTRO);
+				setSexOption(3);
 				break;
 
 			default:
@@ -127,35 +354,35 @@ public class GameStep {
 	}
 
 	public void chooseName() {
-		System.out.println("Escolha o nome do personagem\n");
-		heroName = entrada.next();
+		System.out.println("Digite o nome do personagem\n");
+		setHeroName(entrada.next());
 	}
 
 	public Hero createHero() {
 
-		while (characterOption != 1 && characterOption != 2 && characterOption != 3 && characterOption != 4
-				&& characterOption != 5) {
+		while (getCharacterOption() != 1 && getCharacterOption() != 2 && getCharacterOption() != 3 && getCharacterOption() != 4
+				&& getCharacterOption() != 5) {
 			System.out.println("Escolha o seu personagem: \n" + "1 - GUERREIRO\n" + "2 - CAVALEIRO\n" + "3 - VIKING\n"
-					+ "4 - ARQUEIRO\n" + "5 -EXTERMINADOR DO FUTURO \n");
-			characterOption = entrada.nextInt();
+					+ "4 - ARQUEIRO\n" + "5 - EXTERMINADOR DO FUTURO \n");
+			setCharacterOption(entrada.nextInt());
 
-			if (characterOption == 1) {
-				character = EnumCharacter.GUERREIRO;
+			if (getCharacterOption() == 1) {
+				setCharacter(EnumCharacter.GUERREIRO);
 
-				while (helmetOption != 1 && helmetOption != 2 && helmetOption != 3) {
+				while (getHelmetOption() != 1 && getHelmetOption() != 2 && getHelmetOption() != 3) {
 					System.out.println("Escolha o capacete do personagem\n" + "1 - OURO\n" + "2 - DIAMANTE\n"
 							+ "3 - ADAMANTIUM\n");
-					helmetOption = entrada.nextInt();
+					setHelmetOption(entrada.nextInt());
 
 					switch (helmetOption) {
 					case 1:
-						helmet = EnumHelmet.OURO;
+						setHelmet(EnumHelmet.OURO);
 						break;
 					case 2:
-						helmet = EnumHelmet.DIAMANTE;
+						setHelmet(EnumHelmet.DIAMANTE);
 						break;
 					case 3:
-						helmet = EnumHelmet.ADAMANTIUM;
+						setHelmet(EnumHelmet.ADAMANTIUM);
 						break;
 
 					default:
@@ -165,20 +392,20 @@ public class GameStep {
 
 				}
 
-				while (costumeOption != 1 && costumeOption != 2 && costumeOption != 3) {
+				while (getCostumeOption() != 1 && getCostumeOption() != 2 && getCostumeOption() != 3) {
 					System.out.println(
 							"Escolha a armadura do personagem\n" + "1 - ARMADURA\n" + "2 - HEROI\n" + "3 - CAMPONES\n");
-					costumeOption = entrada.nextInt();
+					setCostumeOption(entrada.nextInt());
 
-					switch (costumeOption) {
+					switch (getCostumeOption()) {
 					case 1:
-						costume = EnumCostume.ARMADURA;
+						setCostume(EnumCostume.ARMADURA);
 						break;
 					case 2:
-						costume = EnumCostume.HEROI;
+						setCostume(EnumCostume.HEROI);
 						break;
 					case 3:
-						costume = EnumCostume.CAMPONES;
+						setCostume(EnumCostume.CAMPONES);
 						break;
 
 					default:
@@ -188,20 +415,20 @@ public class GameStep {
 
 				}
 
-				while (weaponOption != 1 && weaponOption != 2 && weaponOption != 3) {
+				while (getWeaponOption() != 1 && getWeaponOption() != 2 && getWeaponOption() != 3) {
 					System.out.println(
 							"Escolha a arma do personagem\n" + "1 - EXCALIBUR\n" + "2 - SAMURAI\n" + "3 - ADAGA\n");
-					weaponOption = entrada.nextInt();
+					setWeaponOption(entrada.nextInt());
 
-					switch (weaponOption) {
+					switch (getWeaponOption()) {
 					case 1:
-						weapon = EnumWeapon.EXCALIBUR;
+						setWeapon(EnumWeapon.EXCALIBUR);
 						break;
 					case 2:
-						weapon = EnumWeapon.SAMURAI;
+						setWeapon(EnumWeapon.SAMURAI);
 						break;
 					case 3:
-						weapon = EnumWeapon.ADAGA;
+						setWeapon(EnumWeapon.ADAGA);
 						break;
 
 					default:
@@ -211,23 +438,23 @@ public class GameStep {
 
 				}
 
-			} else if (characterOption == 2) {
-				character = EnumCharacter.CAVALEIRO;
+			} else if (getCharacterOption() == 2) {
+				setCharacter(EnumCharacter.CAVALEIRO);
 
-				while (helmetOption != 1 && helmetOption != 2 && helmetOption != 3) {
+				while (getHelmetOption() != 1 && getHelmetOption() != 2 && getHelmetOption() != 3) {
 					System.out.println("Escolha o capacete do personagem\n" + "1 - OURO\n" + "2 - DIAMANTE\n"
 							+ "3 - ADAMANTIUM\n");
-					helmetOption = entrada.nextInt();
+					setHelmetOption(entrada.nextInt());
 
-					switch (helmetOption) {
+					switch (getHelmetOption()) {
 					case 1:
-						helmet = EnumHelmet.OURO;
+						setHelmet(EnumHelmet.OURO);
 						break;
 					case 2:
-						helmet = EnumHelmet.DIAMANTE;
+						setHelmet(EnumHelmet.DIAMANTE);
 						break;
 					case 3:
-						helmet = EnumHelmet.ADAMANTIUM;
+						setHelmet(EnumHelmet.ADAMANTIUM);
 						break;
 
 					default:
@@ -237,20 +464,20 @@ public class GameStep {
 
 				}
 
-				while (costumeOption != 1 && costumeOption != 2 && costumeOption != 3) {
+				while (getCostumeOption() != 1 && getCostumeOption() != 2 && getCostumeOption() != 3) {
 					System.out.println(
 							"Escolha a armadura do personagem\n" + "1 - ARMADURA\n" + "2 - HEROI\n" + "3 - CAMPONES\n");
-					costumeOption = entrada.nextInt();
+					setCostumeOption(entrada.nextInt());
 
-					switch (costumeOption) {
+					switch (getCostumeOption()) {
 					case 1:
-						costume = EnumCostume.ARMADURA;
+						setCostume(EnumCostume.ARMADURA);
 						break;
 					case 2:
-						costume = EnumCostume.HEROI;
+						setCostume(EnumCostume.HEROI);
 						break;
 					case 3:
-						costume = EnumCostume.CAMPONES;
+						setCostume(EnumCostume.CAMPONES);
 						break;
 
 					default:
@@ -260,20 +487,20 @@ public class GameStep {
 
 				}
 
-				while (weaponOption != 1 && weaponOption != 2 && weaponOption != 3) {
+				while (getWeaponOption() != 1 && getWeaponOption() != 2 && getWeaponOption() != 3) {
 					System.out.println("Escolha o cavalo do personagem\n" + "1 - PEGASUS\n" + "2 - CAVALO DE FOGO\n"
 							+ "3 - PÉ DE PANO\n");
-					weaponOption = entrada.nextInt();
+					setWeaponOption(entrada.nextInt());
 
-					switch (weaponOption) {
+					switch (getWeaponOption()) {
 					case 1:
-						weapon = EnumWeapon.PEGASUS;
+						setWeapon(EnumWeapon.PEGASUS);
 						break;
 					case 2:
-						weapon = EnumWeapon.CAVALO_DE_FOGO;
+						setWeapon(EnumWeapon.CAVALO_DE_FOGO);
 						break;
 					case 3:
-						weapon = EnumWeapon.PE_DE_PANO;
+						setWeapon(EnumWeapon.PE_DE_PANO);
 						break;
 
 					default:
@@ -283,23 +510,23 @@ public class GameStep {
 
 				}
 
-			} else if (characterOption == 3) {
-				character = EnumCharacter.VIKING;
+			} else if (getCharacterOption() == 3) {
+				setCharacter(EnumCharacter.VIKING);
 
-				while (helmetOption != 1 && helmetOption != 2 && helmetOption != 3) {
+				while (getHelmetOption() != 1 && getHelmetOption() != 2 && getHelmetOption() != 3) {
 					System.out.println("Escolha o capacete do personagem\n" + "1 - OURO\n" + "2 - DIAMANTE\n"
 							+ "3 - ADAMANTIUM\n");
-					helmetOption = entrada.nextInt();
+					setHelmetOption(entrada.nextInt());
 
-					switch (helmetOption) {
+					switch (getHelmetOption()) {
 					case 1:
-						helmet = EnumHelmet.OURO;
+						setHelmet(EnumHelmet.OURO);
 						break;
 					case 2:
-						helmet = EnumHelmet.DIAMANTE;
+						setHelmet(EnumHelmet.DIAMANTE);
 						break;
 					case 3:
-						helmet = EnumHelmet.ADAMANTIUM;
+						setHelmet(EnumHelmet.ADAMANTIUM);
 						break;
 
 					default:
@@ -309,20 +536,20 @@ public class GameStep {
 
 				}
 
-				while (costumeOption != 1 && costumeOption != 2 && costumeOption != 3) {
+				while (getCostumeOption() != 1 && getCostumeOption() != 2 && getCostumeOption() != 3) {
 					System.out.println(
 							"Escolha a armadura do personagem\n" + "1 - ARMADURA\n" + "2 - HEROI\n" + "3 - CAMPONES\n");
-					costumeOption = entrada.nextInt();
+					setCostumeOption(entrada.nextInt());
 
-					switch (costumeOption) {
+					switch (getCostumeOption()) {
 					case 1:
-						costume = EnumCostume.ARMADURA;
+						setCostume(EnumCostume.ARMADURA);
 						break;
 					case 2:
-						costume = EnumCostume.HEROI;
+						setCostume(EnumCostume.HEROI);
 						break;
 					case 3:
-						costume = EnumCostume.CAMPONES;
+						setCostume(EnumCostume.CAMPONES);
 						break;
 
 					default:
@@ -332,20 +559,20 @@ public class GameStep {
 
 				}
 
-				while (weaponOption != 1 && weaponOption != 2 && weaponOption != 3) {
+				while (getWeaponOption() != 1 && getWeaponOption() != 2 && getWeaponOption() != 3) {
 					System.out.println(
 							"Escolha a arma do personagem\n" + "1 - MACHADO\n" + "2 - MARTELO\n" + "3 - ESCUDO\n");
-					weaponOption = entrada.nextInt();
+					setWeaponOption(entrada.nextInt());
 
-					switch (weaponOption) {
+					switch (getWeaponOption()) {
 					case 1:
-						weapon = EnumWeapon.MACHADO;
+						setWeapon(EnumWeapon.MACHADO);
 						break;
 					case 2:
-						weapon = EnumWeapon.MARTELO;
+						setWeapon(EnumWeapon.MARTELO);
 						break;
 					case 3:
-						weapon = EnumWeapon.ESCUDO;
+						setWeapon(EnumWeapon.ESCUDO);
 						break;
 
 					default:
@@ -355,23 +582,23 @@ public class GameStep {
 
 				}
 
-			} else if (characterOption == 4) {
-				character = EnumCharacter.ARQUEIRO;
+			} else if (getCharacterOption() == 4) {
+				setCharacter(EnumCharacter.ARQUEIRO);
 
-				while (helmetOption != 1 && helmetOption != 2 && helmetOption != 3) {
+				while (getHelmetOption() != 1 && getHelmetOption() != 2 && getHelmetOption() != 3) {
 					System.out.println("Escolha o capacete do personagem\n" + "1 - OURO\n" + "2 - DIAMANTE\n"
 							+ "3 - ADAMANTIUM\n");
-					helmetOption = entrada.nextInt();
+					setHelmetOption(entrada.nextInt());
 
-					switch (helmetOption) {
+					switch (getHelmetOption()) {
 					case 1:
-						helmet = EnumHelmet.OURO;
+						setHelmet(EnumHelmet.OURO);
 						break;
 					case 2:
-						helmet = EnumHelmet.DIAMANTE;
+						setHelmet(EnumHelmet.DIAMANTE);
 						break;
 					case 3:
-						helmet = EnumHelmet.ADAMANTIUM;
+						setHelmet(EnumHelmet.ADAMANTIUM);
 						break;
 
 					default:
@@ -381,20 +608,20 @@ public class GameStep {
 
 				}
 
-				while (costumeOption != 1 && costumeOption != 2 && costumeOption != 3) {
+				while (getCostumeOption() != 1 && getCostumeOption() != 2 && getCostumeOption() != 3) {
 					System.out.println(
 							"Escolha a armadura do personagem\n" + "1 - ARMADURA\n" + "2 - HEROI\n" + "3 - CAMPONES\n");
-					costumeOption = entrada.nextInt();
+					setCostumeOption(entrada.nextInt());
 
-					switch (costumeOption) {
+					switch (getCostumeOption()) {
 					case 1:
-						costume = EnumCostume.ARMADURA;
+						setCostume(EnumCostume.ARMADURA);
 						break;
 					case 2:
-						costume = EnumCostume.HEROI;
+						setCostume(EnumCostume.HEROI);
 						break;
 					case 3:
-						costume = EnumCostume.CAMPONES;
+						setCostume(EnumCostume.CAMPONES);
 						break;
 
 					default:
@@ -404,20 +631,20 @@ public class GameStep {
 
 				}
 
-				while (weaponOption != 1 && weaponOption != 2 && weaponOption != 3) {
+				while (getWeaponOption() != 1 && getWeaponOption() != 2 && getWeaponOption() != 3) {
 					System.out.println("Escolha a arma do personagem\n" + "1 - FLEXAS DE AÇO\n" + "2 - FLEXAS DE FOGO\n"
 							+ "3 - BESTA\n");
-					weaponOption = entrada.nextInt();
+					setWeaponOption(entrada.nextInt());
 
-					switch (weaponOption) {
+					switch (getWeaponOption()) {
 					case 1:
-						weapon = EnumWeapon.FLEXAS_DE_ACO;
+						setWeapon(EnumWeapon.FLEXAS_DE_ACO);
 						break;
 					case 2:
-						weapon = EnumWeapon.FLEXAS_DE_FOGO;
+						setWeapon(EnumWeapon.FLEXAS_DE_FOGO);
 						break;
 					case 3:
-						weapon = EnumWeapon.BESTA;
+						setWeapon(EnumWeapon.BESTA);
 						break;
 
 					default:
@@ -427,23 +654,23 @@ public class GameStep {
 
 				}
 
-			} else if (characterOption == 5) {
-				character = EnumCharacter.EXTERMINADOR_DO_FUTURO;
+			} else if (getCharacterOption() == 5) {
+				setCharacter(EnumCharacter.EXTERMINADOR_DO_FUTURO);
 
-				while (helmetOption != 1 && helmetOption != 2 && helmetOption != 3) {
+				while (getHelmetOption() != 1 && getHelmetOption() != 2 && getHelmetOption() != 3) {
 					System.out.println("Escolha o capacete do personagem\n" + "1 - OURO\n" + "2 - DIAMANTE\n"
 							+ "3 - ADAMANTIUM\n");
-					helmetOption = entrada.nextInt();
+					setHelmetOption(entrada.nextInt());
 
-					switch (helmetOption) {
+					switch (getHelmetOption()) {
 					case 1:
-						helmet = EnumHelmet.OURO;
+						setHelmet(EnumHelmet.OURO);
 						break;
 					case 2:
-						helmet = EnumHelmet.DIAMANTE;
+						setHelmet(EnumHelmet.DIAMANTE);
 						break;
 					case 3:
-						helmet = EnumHelmet.ADAMANTIUM;
+						setHelmet(EnumHelmet.ADAMANTIUM);
 						break;
 
 					default:
@@ -453,20 +680,20 @@ public class GameStep {
 
 				}
 
-				while (costumeOption != 1 && costumeOption != 2 && costumeOption != 3) {
+				while (getCostumeOption() != 1 && getCostumeOption() != 2 && getCostumeOption() != 3) {
 					System.out.println(
 							"Escolha a armadura do personagem\n" + "1 - ARMADURA\n" + "2 - HEROI\n" + "3 - CAMPONES\n");
-					costumeOption = entrada.nextInt();
+					setCostumeOption(entrada.nextInt());
 
-					switch (costumeOption) {
+					switch (getCostumeOption()) {
 					case 1:
-						costume = EnumCostume.ARMADURA;
+						setCostume(EnumCostume.ARMADURA);
 						break;
 					case 2:
-						costume = EnumCostume.HEROI;
+						setCostume(EnumCostume.HEROI);
 						break;
 					case 3:
-						costume = EnumCostume.CAMPONES;
+						setCostume(EnumCostume.CAMPONES);
 						break;
 
 					default:
@@ -476,20 +703,20 @@ public class GameStep {
 
 				}
 
-				while (weaponOption != 1 && weaponOption != 2 && weaponOption != 3) {
+				while (getWeaponOption() != 1 && getWeaponOption() != 2 && getWeaponOption() != 3) {
 					System.out.println("Escolha a arma do personagem\n" + "1 - ESPINGARDA\n" + "2 - METRALHADORA\n"
 							+ "3 - PISTOLA\n");
-					weaponOption = entrada.nextInt();
+					setWeaponOption(entrada.nextInt());
 
-					switch (weaponOption) {
+					switch (getWeaponOption()) {
 					case 1:
-						weapon = EnumWeapon.ESPINGARDA;
+						setWeapon(EnumWeapon.ESPINGARDA);
 						break;
 					case 2:
-						weapon = EnumWeapon.METRALHADORA;
+						setWeapon(EnumWeapon.METRALHADORA);
 						break;
 					case 3:
-						weapon = EnumWeapon.PISTOLA;
+						setWeapon(EnumWeapon.PISTOLA);
 						break;
 
 					default:
@@ -503,8 +730,8 @@ public class GameStep {
 		}
 
 		enterIntoGame = 2;
-		return hero = new Hero(heroName, sex, character, helmet, helmet.getDano(), costume, costume.getDano(), weapon,
-				weapon.getDano());
+		return hero = new Hero(getHeroName(), getSex(), getCharacter(), getHelmet(), getHelmet().getDano(), getCostume(), getCostume().getDano(),
+				getWeapon(), getWeapon().getDano());
 
 	}
 
@@ -512,26 +739,26 @@ public class GameStep {
 		System.out.println(EnumGameAction.GAME_INTRODUCTION.getMessage());
 		System.out.println(
 				"Escolha sua motivação para invadir a caverna do inimigo e derrotá-lo: \n1 - Vingança\n2 - Glória\n");
-		gameMotivation = entrada.nextInt();
-		if (gameMotivation == 1) {
-			gameAction = EnumGameAction.VINGANCA.getMessage();
+		setGameMotivation(entrada.nextInt());
+		if (getGameMotivation() == 1) {
+			setGameAction(EnumGameAction.VINGANCA.getMessage());
 			System.out.println(gameAction);
-		} else if (gameMotivation == 1) {
-			gameAction = EnumGameAction.GLORIA.getMessage();
-			System.out.println(gameAction);
+		} else if (getGameMotivation() == 2) {
+			setGameAction(EnumGameAction.GLORIA.getMessage());
+			System.out.println(getGameAction());
 		}
 	}
 
 	public void goAheadOrGiveUp() {
 		System.out.println(EnumGameAction.AFTER_CHOOSE_MOTIVATION.getMessage());
 		System.out.println("Qual seu caminho: \n1 - Seguir em frente\n2 - Desistir feito um covarde\n");
-		chooseGameGoAheadOrGiveUp = entrada.nextInt();
-		if (chooseGameGoAheadOrGiveUp == 1) {
-			gameGoAheadOrGiveUp = EnumGameAction.SEGUIR.getMessage();
+		setChooseGameGoAheadOrGiveUp(entrada.nextInt());
+		if (getChooseGameGoAheadOrGiveUp() == 1) {
+			setGameGoAheadOrGiveUp(EnumGameAction.SEGUIR.getMessage());
 			System.out.println(gameGoAheadOrGiveUp);
 		} else {
-			gameGoAheadOrGiveUp = EnumGameAction.DESISTIR.getMessage();
-			System.out.println(gameGoAheadOrGiveUp);
+			setGameGoAheadOrGiveUp(EnumGameAction.DESISTIR.getMessage());
+			System.out.println(getGameGoAheadOrGiveUp());
 			System.exit(0);
 		}
 	}
@@ -540,20 +767,20 @@ public class GameStep {
 		int diceRollDamageHero;
 		System.out.println(EnumGameAction.AFTER_CHOOSE_GO_OR_GIVEUP.getMessage());
 		System.out.println("\nEntrar pela porta: \n1 - Saltando\n2 - Andando\n3 - Correndo\n");
-		chooseEnterTheDoor = entrada.nextInt();
-		if (chooseEnterTheDoor == 1) {
-			gameEnterTheDoor = EnumGameAction.SALTANDO.getMessage();
-			System.out.println(gameEnterTheDoor);
-		} else if (chooseEnterTheDoor == 2) {
-			gameEnterTheDoor = EnumGameAction.ANDANDO.getMessage();
-			System.out.println(gameEnterTheDoor);
+		setChooseEnterTheDoor(entrada.nextInt());
+		if (getChooseEnterTheDoor() == 1) {
+			setGameEnterTheDoor(EnumGameAction.SALTANDO.getMessage());
+			System.out.println(getGameEnterTheDoor());
+		} else if (getChooseEnterTheDoor() == 2) {
+			setGameEnterTheDoor(EnumGameAction.ANDANDO.getMessage());
+			System.out.println(getGameEnterTheDoor());
 			diceRollDamageHero = random.nextInt(10);
 			hero.setLife(100.0 - diceRollDamageHero);
 			System.out.println("E você sofre um dano de: " + diceRollDamageHero);
 			System.out.println("A vida do Heroi fica em: " + hero.getLife());
-		} else if (chooseEnterTheDoor == 3) {
-			gameEnterTheDoor = EnumGameAction.CORRENDO.getMessage();
-			System.out.println(gameEnterTheDoor);
+		} else if (getChooseEnterTheDoor() == 3) {
+			setGameEnterTheDoor(EnumGameAction.CORRENDO.getMessage());
+			System.out.println(getGameEnterTheDoor());
 		}
 	}
 
@@ -629,7 +856,7 @@ public class GameStep {
 				} else {
 					System.out.println(EnumGameAction.DONT_ACEPT_LEFT_DOOR_GIFT.getMessage());
 				}
-				doorKeys += 1;
+				setDoorKeys(getDoorKeys() + 1);
 				leftDoor = 1;
 			}
 
@@ -641,7 +868,7 @@ public class GameStep {
 
 		armeiro.createArmeiro();
 
-		combat.fight(hero, armeiro, levelGame);
+		combat.fight(hero, armeiro, getLevelGame());
 
 	}
 
@@ -649,7 +876,7 @@ public class GameStep {
 
 		alquimista.createAlquimista();
 
-		combat.fight(hero, alquimista, levelGame);
+		combat.fight(hero, alquimista, getLevelGame());
 
 	}
 
@@ -657,7 +884,7 @@ public class GameStep {
 
 		poderosoChefao.createGodFather();
 
-		combat.fight(hero, poderosoChefao, levelGame);
+		combat.fight(hero, poderosoChefao, getLevelGame());
 
 	}
 

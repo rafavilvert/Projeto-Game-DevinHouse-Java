@@ -11,10 +11,6 @@ public class Hero extends Personage {
 		super(name, sex, typeCharacter, helmet, helmetScore, costume, costumeScore, weaponOne, weaponOneScore);
 	}
 
-	public void atacar(EnemyCaptain opponentPlayer, int dano) {
-		opponentPlayer.setLife(opponentPlayer.getLife() - dano);
-	}
-
 	public void atacar(Personage opponentPlayer, int levelGame) {
 		int option = 0;
 		while (option != 127) {

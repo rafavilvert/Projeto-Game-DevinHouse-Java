@@ -87,7 +87,9 @@ public enum EnumGameAction {
 			+ "Ele percebe sua chegada e se levanta com um salto, apanhando seu machado de guerra de\n"
 			+ "lâmina dupla.\n\n"),
 	AFTER_WON_RIGHT_DOOR(
-			"Você derrotou o Armeiro, mas seus equipamentos estão danificados, você então olha para o lado e vê as armaduras do seu inimigo em ótimo estado, você precisa decisar uasr a armadura ou não\n"),
+			"Você derrotou o Armeiro, mas seus equipamentos estão danificados,"
+			+ " você então olha para o lado e vê as armaduras do seu inimigo em ótimo estado,"
+			+ " você precisa decisar uasr a armadura ou não\n"),
 	ACEPT_RIGHT_DOOR_GIFT("Você resolve usar os equipamentos do\n"
 			+ "inimigo contra ele, e trocar algumas peças suas, que estavam danificadas, pelas peças de\n"
 			+ "armaduras existentes na sala. De armadura nova, você se sente mais protegido para os desafios\n"
